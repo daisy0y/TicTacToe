@@ -8,10 +8,18 @@
 </head>
     <body>
         <div class="mainName">Let me go Tic Tac Toe !</div>
+       
+        
+     
+           <div>
 
-        <div>
-            
-            <table id="tableMain">
+             <div id="turnMenu">
+             <div id="turnHeader">현재 순서</div>    
+              <div id="turn"></div>
+           </div>
+
+
+              <table id="tableMain">
                 <tr>
                     <td id="1"></td>
                     <td id="2"></td>
@@ -29,18 +37,13 @@
                 </tr>
 
             </table>
-                                                
+                               
         </div>
         <div class="btns">
-            <button class="startBtn" type="submit">START</button>
-            <button class="resetBtn" type="reset">RESET</button> 
-            <button type="button" class="infoBtn" data-toggle="tooltip" data-placement="top" title="Tooltip on top" tabindex="0">
-            How to Play?
-            </button>
-        
-        </div>
-        
+            <button id="start" class="startBtn" type="submit">START</button>
+            <button id="reset" class="resetBtn" type="reset">RESET</button> 
+            <button type="button" class="infoBtn">How to Play?</button>
+
         <script src="./script.js"></script>
     </body>
 </html>
-
