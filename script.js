@@ -9,11 +9,11 @@
 // 승리조건 123, 456 , 789, 147,258,369 , 159 , 357
 // 차례 표시 넣기
 const td = document.querySelectorAll("td");
-let turn = true;
+let turn = true;  // 순서 초기값
 const startBtn = document.getElementById("start");
 const tableMain = document.getElementById("tableMain");
 const reset = document.getElementById("reset");
-
+let drawValue = 1; // 무승부 초기값
 
 function pushO(tdTarget){
     tdTarget.innerHTML="O";
@@ -31,11 +31,13 @@ function playing(e){
         pushO(e.target);
         turnAlert();
         gameEnd();
+        draw();
         }
     else if(!turn && e.target.innerHTML.length=== 0){
         pushX(e.target);
         turnAlert();
         gameEnd();
+        draw();
        }
 }
 
@@ -44,6 +46,7 @@ function clickTd(){
     for(let i = 0 ; i < td.length; i++){
       td[i].addEventListener("click",function(e){
         playing(e);
+        drawValue += 1;
         });
        }
     }
@@ -63,6 +66,7 @@ function clickReset(){
         for(let i = 0 ; i < td.length;i++){
             td[i].innerText="";
             tableMain.style.pointerEvents="none"
+            drawValue = 0 ;
        }
         }
        )}
@@ -101,6 +105,7 @@ function gameEnd(){
        || td[2].innerText == "O" && td[4].innerText == "O" && td[6].innerText == "O"){
       alert("O 팀이 승리하였습니다 ! 축하합니다!");
       gameReset();
+      drawValue = 0;
    }else if(td[0].innerText == "X" && td[1].innerText == "X" && td[2].innerText == "X"
    || td[3].innerText == "X" && td[4].innerText == "X" && td[5].innerText == "X"
    || td[6].innerText == "X" && td[7].innerText == "X" && td[8].innerText == "X"
@@ -111,8 +116,25 @@ function gameEnd(){
    || td[2].innerText == "X" && td[4].innerText == "X" && td[6].innerText == "X"){
   alert("X 팀이 승리하였습니다 ! 축하합니다!");
   gameReset();
+  drawValue = 0;
 }}
 gameEnd();
 
+// 무승부 함수
+function draw(){
+if(drawValue === 9){
+    alert("무승부 입니다!");
+    drawValue = 0;
+    gameReset();
+}
+}
 
+
+
+// for(let i = 0 ; i < td.length ; i++){
+//     if(td[i].attributes.length === 1)
+// alert("무승부입니다!")
+// }
+
+// 만약 모든 td값이 있고 승리값이 아닐시 무승부 출력
 // 승리조건 012, 345, 678, 036,147,258,048,246
