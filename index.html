@@ -7,21 +7,25 @@
     <link rel="stylesheet" href="./style.css">
 </head>
     <body>
+        <!-- 배경 및 테이블 색상변경, 현재순서 위치조정필요 ,모바일 반응형 추가중, 진행중 같은곳 여러번 클릭하면 무승부 실행안되는 오류 발견 -->
         <div class="mainName">Let me go Tic Tac Toe !</div>
-       
-        
-     
-           <div>
+          
+           <div id="mainContent">
+            <div id="turnMenu">
+                <div id="turnHeader">현재 순서</div>    
+                <div id="turn"></div>
+            </div>
+             
+            <!-- <div id="timerMenu">
+                <div id="timerHeader">남은 시간</div>
+                <div id="timer"></div>
 
-             <div id="turnMenu">
-             <div id="turnHeader">현재 순서</div>    
-              <div id="turn"></div>
-           </div>
-
+            </div> -->
 
               <table id="tableMain">
                 <tr>
                     <td id="1"></td>
+
                     <td id="2"></td>
                     <td id="3"></td>
                 </tr>
@@ -39,11 +43,15 @@
             </table>
                                
         </div>
+       
         <div class="btns">
             <button id="start" class="startBtn" type="submit">START</button>
             <button id="reset" class="resetBtn" type="reset">RESET</button> 
-            <button type="button" class="infoBtn">How to Play?</button>
-
+            <button type="button" class="infoBtn">How?
+                <span class="tooltip">하히후헤호</span>
+            </button>
+            
+                </div>
         <script src="./script.js"></script>
     </body>
 </html>

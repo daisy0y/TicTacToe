@@ -1,13 +1,5 @@
-// 1. 클릭시 O X 출력하게 하기
-// 2. 승리 조건 달성시 얼럿 띄우기
-// 3. 스타트 눌렀을때 시작하기
-// 4. 리셋 누르면 초기화
-// 5.  how to play 사용설명 
-// 클릭을하면 O X를 출력을 한다. 단 조건이 있다. 처음 순서는 O이며 그 자리에 만약 O가 있으면 X를 출력을하고 X가 있다면 O를 출력을 한다.
-// 똑같은자리 플레이못하게
-// (turn = true) => O 의 차례 / (turn = true) => X 의 차례
-// 승리조건 123, 456 , 789, 147,258,369 , 159 , 357
-// 차례 표시 넣기
+//how to play 사용설명 
+//타이머기능넣기
 const td = document.querySelectorAll("td");
 let turn = true;  // 순서 초기값
 const startBtn = document.getElementById("start");
@@ -121,6 +113,7 @@ function gameEnd(){
 gameEnd();
 
 // 무승부 함수
+
 function draw(){
 if(drawValue === 9){
     alert("무승부 입니다!");
@@ -129,12 +122,3 @@ if(drawValue === 9){
 }
 }
 
-
-
-// for(let i = 0 ; i < td.length ; i++){
-//     if(td[i].attributes.length === 1)
-// alert("무승부입니다!")
-// }
-
-// 만약 모든 td값이 있고 승리값이 아닐시 무승부 출력
-// 승리조건 012, 345, 678, 036,147,258,048,246
