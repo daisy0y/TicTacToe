@@ -1,5 +1,6 @@
 //how to play 사용설명 
 //타이머기능넣기
+// 무승부 오류는 drawValue 값을 클릭할때 주는거에서 O,X 입력될때마다 value값을 1씩 더하게 변경하여 오류 수정
 const td = document.querySelectorAll("td");
 let turn = true;  // 순서 초기값
 const startBtn = document.getElementById("start");
@@ -10,12 +11,15 @@ let drawValue = 1; // 무승부 초기값
 function pushO(tdTarget){
     tdTarget.innerHTML="O";
     turn = false;
+    drawValue += 1;
 }
 
 function pushX(tdTarget){
     tdTarget.innerHTML="X";
     turn = true;
+    drawValue += 1;
 }
+
 
 // 차례알림 추가하기
 function playing(e){
@@ -38,7 +42,7 @@ function clickTd(){
     for(let i = 0 ; i < td.length; i++){
       td[i].addEventListener("click",function(e){
         playing(e);
-        drawValue += 1;
+        
         });
        }
     }
@@ -113,12 +117,12 @@ function gameEnd(){
 gameEnd();
 
 // 무승부 함수
-
 function draw(){
-if(drawValue === 9){
-    alert("무승부 입니다!");
-    drawValue = 0;
-    gameReset();
-}
-}
-
+    if(drawValue === 9){
+        alert("무승부 입니다!");
+        drawValue = 0;
+        gameReset();
+    }
+    }
+    
+    

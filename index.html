@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style.css">
 </head>
     <body>
-        <!-- 배경 및 테이블 색상변경, 현재순서 위치조정필요 ,모바일 반응형 추가중, 진행중 같은곳 여러번 클릭하면 무승부 실행안되는 오류 발견 -->
+        <!-- 현재순서 위치조정필요 ,모바일 반응형 추가중, 진행중 같은곳 여러번 클릭하면 무승부 실행안되는 오류 발견 -->
         <div class="mainName">Let me go Tic Tac Toe !</div>
           
            <div id="mainContent">
@@ -45,13 +45,20 @@
         </div>
        
         <div class="btns">
-            <button id="start" class="startBtn" type="submit">START</button>
-            <button id="reset" class="resetBtn" type="reset">RESET</button> 
-            <button type="button" class="infoBtn">How?
-                <span class="tooltip">하히후헤호</span>
-            </button>
+            <div id="start" class="startBtn">START</div>
+            <div id="reset" class="resetBtn">RESET</div> 
+            <div class="infoBtn">How <br>to<br> Play?
+                <span class="tooltip">
+                    TicTacToe 게임은 두명이 번갈아가며 <br>
+                    O와 X를 3X3 게임판에 그리며<br>
+                    3개의 칸에 연속적으로 한 명의<br>
+                    플레이어가 놓게 되면 승리하게<br>
+                    는 게임입니다. 
+                    </span>
+         
             
                 </div>
+        </div>
         <script src="./script.js"></script>
     </body>
 </html>
