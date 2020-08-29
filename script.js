@@ -52,6 +52,8 @@ clickTd();
 function start(){   
         startBtn.addEventListener("click",function(){
         tableMain.style.pointerEvents="auto"
+        setInterval(countDown,1000);
+
     })
 }
 start();
@@ -125,4 +127,18 @@ function draw(){
     }
     }
     
-    
+// 타이머
+
+let time = 5;
+const timeDisplay = document.querySelector("#time")
+
+
+
+function countDown(){
+ if(time >0){
+    time--
+    timeDisplay.innerText=time
+
+
+  }
+}

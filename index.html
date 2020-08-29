@@ -7,21 +7,21 @@
     <link rel="stylesheet" href="./style.css">
 </head>
     <body>
-        <!-- 현재순서 위치조정필요 ,모바일 반응형 추가중, 진행중 같은곳 여러번 클릭하면 무승부 실행안되는 오류 발견 -->
+     <!-- table margin값 제거  -->
         <div class="mainName">Let me go Tic Tac Toe !</div>
-          
+
+        <div class="display">
+            <div id="turnDisplay">현재순서:
+                 <span id="turn"></span>
+                     </div>
+                   <div id="timeDisplay">남은시간:
+                    <span id="time">5</span>
+                   </div>  
+                     
+           </div>
+
            <div id="mainContent">
-            <div id="turnMenu">
-                <div id="turnHeader">현재 순서</div>    
-                <div id="turn"></div>
-            </div>
-             
-            <!-- <div id="timerMenu">
-                <div id="timerHeader">남은 시간</div>
-                <div id="timer"></div>
-
-            </div> -->
-
+     
               <table id="tableMain">
                 <tr>
                     <td id="1"></td>
