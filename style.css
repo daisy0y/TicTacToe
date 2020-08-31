@@ -40,12 +40,12 @@ font-size: 40px;
 }
 
 td{
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   background-color: #82ccdd;
   border: solid 1px black;
   text-align: center;
-  font-size: 150px;
+  font-size: 100px;
   cursor: pointer;
 }
 
@@ -66,8 +66,8 @@ td:hover{
   background-color: white;
   color: black;
   border: 2px solid #555555;
-  width: 100px;
-  height: 70px;
+  width: 5.5rem;
+  height: 4.5rem;
   cursor: pointer;
   line-height: 70px;
 }
@@ -81,11 +81,12 @@ td:hover{
   background-color: white;
   color: black;
   border: 2px solid #555555;
-  width: 100px;
-  height: 70px;
+  width: 5.5rem;
+  height: 4.5rem;
   cursor: pointer;
   margin: 0 5px;
   line-height: 70px;
+  
 }
 
 .resetBtn:hover {
@@ -97,10 +98,11 @@ td:hover{
   background-color: white;
   color: black;
   border: 2px solid #555555;
-  width: 100px;
-  height: 70px;
+  width: 5.5rem;
+  height: 4.5rem;
   cursor: pointer;
-}
+  text-align: center;
+  }
 .infoBtn:hover{
   background-color: #555555;
   color: white;
@@ -137,15 +139,15 @@ td:hover{
      }
 
  .startBtn , .resetBtn{
-    width: 50px;
-    height: 35px;
+    width: 2.5rem;
+    height: 2rem;
     font-size: 7px;
     line-height: 35px;
 }
 
 .infoBtn{
-  width: 50px;
-  height: 35px;
+  width: 2.5rem;
+  height: 2rem;
   font-size: 7px;
 }
 
