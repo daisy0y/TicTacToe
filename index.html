@@ -7,57 +7,54 @@
     <link rel="stylesheet" href="./style.css">
 </head>
     <body>
-     <!-- table margin값 제거  -->
-        <div class="mainName">Let me go Tic Tac Toe !</div>
+        <header>
+            <div class="mainName">Let me go Tic Tac Toe !</div>
+        </header>
 
-        <div class="display">
-            <div id="turnDisplay">현재순서:
-                 <span id="turn"></span>
-                     </div>
-                   <div id="timeDisplay">남은시간:
+            <div class="display">
+                <div id="turnDisplay">현재순서:
+                    <span id="turn"></span>
+                </div>
+                <div id="timeDisplay">남은시간:
                     <span id="time">5</span>
-                   </div>  
-                     
-           </div>
+                </div>  
+            </div>
 
-           <div id="mainContent">
-     
-              <table id="tableMain">
-                <tr>
-                    <td id="1"></td>
+            <div id="mainContent">
+                <table id="tableMain">
+                    <tr>
+                        <td id="1"></td>
 
-                    <td id="2"></td>
-                    <td id="3"></td>
-                </tr>
-                <tr>
-                    <td id="4"></td>
-                    <td id="5"></td>
-                    <td id="6"></td>
-                </tr>
-                <tr>
-                    <td id="7"></td>
-                    <td id="8"></td>
-                    <td id="9"></td>
-                </tr>
+                        <td id="2"></td>
+                        <td id="3"></td>
+                    </tr>
+                    <tr>
+                        <td id="4"></td>
+                        <td id="5"></td>
+                        <td id="6"></td>
+                    </tr>
+                    <tr>
+                        <td id="7"></td>
+                        <td id="8"></td>
+                        <td id="9"></td>
+                    </tr>
 
-            </table>
-                               
-        </div>
-       
+                </table>
+                                
+            </div>
+        
         <div class="btns">
             <div id="start" class="startBtn">START</div>
             <div id="reset" class="resetBtn">RESET</div> 
-            <div class="infoBtn">How to Play?
-                
+            <div class="infoBtn">How
                 <span class="tooltip">
                     TicTacToe 게임은 두명이 번갈아가며 <br>
                     O와 X를 3X3 게임판에 그리며<br>
                     3개의 칸에 연속적으로 한 명의<br>
                     플레이어가 놓게 되면 승리하게<br>
                     는 게임입니다. 
-                    </span>
-                
-            </div>
+                 </span>
+            </div> 
         </div>
         <script src="./script.js"></script>
     </body>
